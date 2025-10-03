@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col relative">
+  <div class="min-h-screen flex flex-col">
     <!-- header -->
      <PageHeader /> 
 

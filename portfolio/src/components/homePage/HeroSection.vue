@@ -5,36 +5,75 @@
       backgroundColor: darkMode ? '#1F2937' : '#A7C1A8',
       color: darkMode ? 'white' : 'black'
     }"
-    class="w-full relative min-h-screen flex flex-col md:flex-row items-center justify-between 
-           px-4 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-x-12"
+    class="w-full relative min-h-screen flex flex-col md:flex-row items-center justify-around
+           px-2 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-2"
   >
+          <!-- left section -->
+<div class="w-full flex flex-col items-center md:items-start text-center md:text-left md:ml-30">
+      
+        <div class="text-sm md:text-md mb-2 mt-12 tracking-wide rounded-full
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-white/30 text-[#000000]
+               md:mb-6 ">
+        Ready to Innovate
+      </div>
+ <!-- bg-[#DDAA33] bg-[#6e9999] bg-[#74a5ca]  bg-[#669cc5]/5-->
+    
+      <div class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-8">
+        Full Stack Developer
+      </div>
 
-    <!-- Text Section -->
-    <div
-      class="flex-1 text-center md:text-center bg-white/30 dark:bg-gray-800/40 backdrop-blur-md 
-            p-6 rounded-xl md:rounded-xl shadow-lg w-full max-w-md mt-12 mb-4"
-      :class="[
-        'transition-all duration-1000 ease-out',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      ]"
-    >
-      <h4 class="text-lg  md:text-3xl mb-4">Hi, I'm Jasna 👩‍💻</h4>
-      <p class="text-base md:text-md leading-relaxed md:px-2 m-0">
-        "Developing intelligent, responsive, and <br />
-        reliable applications by blending design, <br />
-        logic, and hands-on coding expertise"
-      </p>
-    </div>
+        <div
+        class="bg-white/30 dark:bg-gray-800/40 backdrop-blur-md
+               p-6 md:px-6 rounded-xl shadow-lg w-full max-w-md
+               md:ml-0"
+        :class="[
+          'transition-all duration-1000 ease-out',
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        ]"
+      >
+        <h4 class="text-lg md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4>
+        <p class="mt-3 mb-0 text-base md:text-md leading-relaxed">
+          "Developing intelligent, responsive, and <br />
+          reliable applications by blending design,
+          logic, and hands-on coding expertise"
+        </p>
+      </div>
+         <!-- button section -->
+  <div class="w-full flex flex-col md:flex-row  items-center md:items-start text-center md:text-left gap-6">
 
-    <!-- Image Section -->
-    <div class="flex-1 flex justify-center" ref="content">
-      <img
+      <div class="invisible md:visible md:text-sm mb-2 mt-12 tracking-wide rounded-full 
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
+               md:mb-6 ">
+             Laravel      </div>
+      <div class="invisible md:visible md:text-sm mb-2 mt-12 tracking-wide rounded-full 
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
+               md:mb-6 ">
+             Codeigniter     </div>
+      <div class="invisible md:visible md:text-sm mb-2 mt-12 tracking-wide rounded-full 
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
+               md:mb-6 ">
+              Python      </div>
+      <div class="invisible md:visible md:text-sm mb-2 mt-12 tracking-wide rounded-full 
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-white/30 text-[#000000]
+               md:mb-6 ">
+               Sql      </div>
+      <div class="invisible md:visible md:text-sm mb-2 mt-12 tracking-wide rounded-full 
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-white/30 text-[#000000]
+               md:mb-6 ">
+           Rest       </div>
+  </div>
+</div>
+<!-- right section -->
+    <div class="w-full md:w-3/2 flex justify-center mt-8 md:mt-0">
+      <img ref="content"
         :src="girlSittingImg"
         alt="Typing code illustration"
-        class="w-48 sm:w-64 md:w-80 lg:w-[28rem] xl:w-[36rem] rounded-xl bg-transparent content-wrapper"
+        class="w-500 md:w-96 lg:w-[48rem] xl:w-[48rem] rounded-xl bg-transparent content-wrapper"
         :class="{ 'animate-in': isVisible }"
       />
     </div>
+
+
   </section>
 </template>
 
@@ -64,6 +103,7 @@ onMounted(() => {
   }
 });
 </script>
+
 <style>
 /* CONTENT HIDDEN */
 .content-wrapper {
