@@ -36,7 +36,7 @@
         :class="{ 'animate-in': isVisible }"
       />
     </div>
-    
+
     
   </section>
 </template>

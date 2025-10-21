@@ -20,9 +20,9 @@
     </ul>
 
     <!-- Dark Mode Toggle -->
-    <button @click="toggleDark" class="ml-4 text-2xl">
+    <!-- <button @click="toggleDark" class="ml-4 text-2xl">
       {{ darkMode ? "🌙" : "☀️" }}
-    </button>
+    </button> -->
   </nav>
 </header>
 </div>
