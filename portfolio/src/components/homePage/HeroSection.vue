@@ -17,7 +17,7 @@
         bg-[#F68537]                                     /* Orange background */
         flex items-center justify-center                       /* Center text visually */
         text-white font-bold uppercase                         /* Text styling: bold */
-        z-40
+        z-40                     
 
         /* SLIDE-IN ANIMATION CLASSES */
         transform duration-1000 ease-out     /* Smooth transition for the slide */
@@ -25,10 +25,10 @@
       "
       :class="{
           'translate-x-full': !isBarVisible, /* Start 100% off screen to the right */
-          'translate-x-0': isBarVisible      /* End position (on screen) */
+          'translate-x-0': isBarVisible      /* End position (slide onto the screen) */
       }"
     >
-      <span class="
+      <!-- <span class="
           transform -rotate-90 origin-top-left                 
           absolute                                             
           top-0 left-0                                         
@@ -38,10 +38,23 @@
           text-2xl md:text-3xl lg:text-4xl                     
           tracking-[0.25em]                                    
         ">
-        Jasna M Naz
-      </span>
-    </div>
+        Jasna M Nazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+      </span> -->
+      <span class="
+      vertical-text-mode /* Uses CSS writing-mode */
+      /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
+      ml-[30vh]
+      /* NO absolute, NO h-full, NO w-full - let flex center it */
+      
+      /* Text Styling */
+     font-extrabold uppercase
+      text-2xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
+    ">
+<span class="text-beige">Jasna</span> 
+  
+  <span class="text-gray-700">M Naz</span>  </span>
 
+    </div>
 
 
           <!-- left section -->
@@ -67,13 +80,15 @@
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         ]"
       >
-        <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4>
+        <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
         <p class="mt-3 mb-0 text-base md:text-md leading-relaxed break-words">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
           logic, and hands-on coding expertise"
         </p>
       </div>
+
+
          <!-- button section revised, removed flex-1 to w-full-->
 <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center">
 
@@ -99,6 +114,8 @@
            Rest api     </div>
   </div>
 </div>
+
+
 <!-- right section removed flex-1 to w-full-->
       <!-- <img ref="content"
         :src="girlSittingImg"
@@ -107,7 +124,7 @@
         :class="{ 'animate-in': isVisible }"
       /> -->
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
-   <div class="w-full md:w-3/2 flex justify-center min-w-0">
+   <div class="w-full md:w-4/2 flex justify-center min-w-0">
       <img 
     ref="content"
     :src="girlSittingImg"
@@ -129,21 +146,19 @@ import girlSittingImg from '../../assets/girl-sitting.png';
 
 // for intersection  observer in hero section animation for slide-in left text-box and image-girl sitting
 // If isVisible === true, it adds the animate-in class.
+
 // 1. Text Box (Controls slide-up) - TRUTH
-const isVisible = ref(false);
-//why using this ref? to observe when the image enters the viewport 
-const content = ref(null);
-// NEW: State for the delayed image animation --delay 1
-const isImageVisible = ref(false);
-// Use watch to apply the background color to the entire body
+     const isVisible = ref(false);
+
+//2.  NEW: State for the delayed image animation --delay 1
+     const isImageVisible = ref(false);
+
 // 3. Vertical Bar (Controls slide-in) - DELAY 2
-const isBarVisible = ref(false);
-watch(darkMode, (newVal) => {
-  const bgColor = newVal ? '#1F2937' : '#A7C1A8';
-  
-  // Update global body style
-  document.body.style.backgroundColor = bgColor;
-}, { immediate: true }); // Runs immediately on component mount
+    const isBarVisible = ref(false);
+
+//why using this ref? to observe when the image enters the viewport 
+    const content = ref(null);
+
 //explain this onMounted function
 // This function is called when the component is mounted to the DOM
 // It sets up an IntersectionObserver to watch the content element
@@ -156,12 +171,15 @@ onMounted(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+
           // 1. Text Box Animation (Immediate)
           isVisible.value = true;
+
           // 2. Girl Image Animation (Delayed by 1000ms)
           setTimeout(() => {
             isImageVisible.value = true;
-          }, 250); // <-- Delay the image start by 200 milliseconds
+          }, 300); // <-- Delay the image start by 200 milliseconds
+          
           // 3. Vertical Bar Animation (Delay 2: 600ms)
           setTimeout(() => {
             isBarVisible.value = true;
@@ -177,17 +195,42 @@ onMounted(() => {
     observer.observe(content.value);
   }
 });
+// Use watch to apply the background color to the entire body
+watch(darkMode, (newVal) => {
+  const bgColor = newVal ? '#1F2937' : '#A7C1A8';
+  
+  // Update global body style
+  document.body.style.backgroundColor = bgColor;
+}, { immediate: true }); // Runs immediately on component mount
 </script>
 
 <style>
 /* CONTENT HIDDEN */
 .content-wrapper {
-  transform: translateY(-40px);
+  transform: translateY(40px);
   opacity: 0;
   transition: all 1s ease-in-out;
 }
 .content-wrapper.animate-in {
   transform: translateY(0);
   opacity: 1;
+}
+/* Custom class to force vertical text */
+/* NEW ROBUST CLASS: Uses writing-mode for reliable vertical text */
+.vertical-text-mode {
+  /* Forces text to flow top-to-bottom */
+  writing-mode: vertical-lr !important;
+  
+  /* Ensures it uses the space correctly */
+  text-orientation:mixed  !important;
+  
+  /* Ensures text doesn't wrap unexpectedly */
+  white-space: nowrap; 
+  
+  /* Add z-index just in case for text layer */
+  z-index: 60 !important; 
+}
+.text-beige {
+  color: #F5F5DC !important; /* A light, standard beige */
 }
 </style>
