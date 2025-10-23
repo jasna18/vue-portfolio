@@ -9,52 +9,39 @@
            px-2 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-2 overflow-x-hidden"
   >
   
-   <div
-      class="
-        absolute right-0 top-0                                 /* Positioned at top-right of hero section */
-        h-screen                                                /* FULL VIEWPORT HEIGHT */
-        w-[5vw] md:w-[18vw]                                    /* DYNAMIC WIDTH based on viewport size */
-        bg-[#F68537]                                     /* Orange background */
-        flex items-center justify-center                       /* Center text visually */
-        text-white font-bold uppercase                         /* Text styling: bold */
-        z-40                     
+    <div
+          class="
+            absolute right-0 top-0                                 /* Positioned at top-right of hero section */
+            h-screen                                                /* FULL VIEWPORT HEIGHT */
+            w-[5vw] md:w-[18vw]                                    /* DYNAMIC WIDTH based on viewport size */
+            bg-[#F68537]                                     /* Orange background */
+            flex items-center justify-center                       /* Center text visually */
+            text-white font-bold uppercase                         /* Text styling: bold */
+            z-40                     
 
-        /* SLIDE-IN ANIMATION CLASSES */
-        transform duration-1000 ease-out     /* Smooth transition for the slide */
-        /* Start position is set by the isVisible class */
-      "
-      :class="{
-          'translate-x-full': !isBarVisible, /* Start 100% off screen to the right */
-          'translate-x-0': isBarVisible      /* End position (slide onto the screen) */
-      }"
-    >
-      <!-- <span class="
-          transform -rotate-90 origin-top-left                 
-          absolute                                             
-          top-0 left-0                                         
-          h-full                                               
-          w-full                                               
-          flex items-center justify-center                     
-          text-2xl md:text-3xl lg:text-4xl                     
-          tracking-[0.25em]                                    
+            /* SLIDE-IN ANIMATION CLASSES */
+            transform duration-1000 ease-out     /* Smooth transition for the slide */
+            /* Start position is set by the isVisible class */
+          "
+          :class="{
+              'translate-x-full': !isBarVisible, /* Start 100% off screen to the right */
+              'translate-x-0': isBarVisible      /* End position (slide onto the screen) */
+          }"
+        >
+          <span class="
+          vertical-text-mode /* Uses CSS writing-mode */
+          /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
+          ml-[30vh]
+          /* NO absolute, NO h-full, NO w-full - let flex center it */
+          
+          /* Text Styling */
+        font-extrabold uppercase
+          text-2xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
         ">
-        Jasna M Nazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
-      </span> -->
-      <span class="
-      vertical-text-mode /* Uses CSS writing-mode */
-      /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
-      ml-[30vh]
-      /* NO absolute, NO h-full, NO w-full - let flex center it */
-      
-      /* Text Styling */
-     font-extrabold uppercase
-      text-2xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
-    ">
-<span class="text-beige">Jasna</span> 
-  
-  <span class="text-gray-700">M Naz</span>  </span>
-
-    </div>
+        <span class="text-beige">Jasna</span> 
+        <span class="text-gray-700">M Naz</span>  
+      </span>
+  </div>
 
 
           <!-- left section -->
@@ -63,25 +50,24 @@
       
         <div class="text-xs md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full justify-center
                dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-2 bg-white/30 text-[#000000]
-              ">
+              inset-shadow-lg shadow-orange-500/50">
         Ready to Innovate
       </div>
-       <!-- bg-[#DDAA33] bg-[#6e9999] bg-[#74a5ca]  bg-[#669cc5]/5-->
 
       <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-8 mt-2 md:mt-0">
         Full Stack Developer
       </div>
       <!-- text section box -->
-        <div
+  <div
         class="w-full max-w-md bg-white/30 dark:bg-gray-800/40 backdrop-blur-md
-               p-6 md:px-6 rounded-xl shadow-lg md:ml-1"
+               p-6 md:px-6 rounded-xl shadow-lg md:ml-1 inset-shadow-sm shadow-orange-500/50"
         :class="[
           'transition-all duration-1000 ease-out',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         ]"
       >
         <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
-        <p class="mt-3 mb-0 text-base md:text-md leading-relaxed break-words">
+        <p class="mt-3 mb-0 text-base md:text-md leading-relaxed break-words ">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
           logic, and hands-on coding expertise"
@@ -90,39 +76,17 @@
 
 
          <!-- button section revised, removed flex-1 to w-full-->
-<div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center">
+  <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center ">
 
-      <div class="hidden sm:inline-block text-sm md:text-sm   tracking-wide rounded-full 
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
-               md:mb-6 ">
-             Laravel      </div>
-      <div class="hidden sm:inline-block text-sm md:text-sm  tracking-wide rounded-full 
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
-               md:mb-6 ">
-             Codeigniter     </div>
-      <div class="hidden sm:inline-block text-sm md:text-sm   tracking-wide rounded-full 
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-1 bg-white/30 text-[#000000]
-               md:mb-6 ">
-              Python      </div>
-      <div class="hidden sm:inline-block text-sm md:text-sm tracking-wide rounded-full 
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-white/30 text-[#000000]
-               md:mb-6 ">
-               Sql      </div>
-      <div class="hidden sm:inline-block text-sm md:text-sm  tracking-wide rounded-full 
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-white/30 text-[#000000]
-               md:mb-6 ">
-           Rest api     </div>
+      <DivComponent text="Laravel" width="px-1"/>
+      <DivComponent text="Codeigniter" width="px-1"/>
+      <DivComponent text="Python" width="px-1"/>
+      <DivComponent text="Sql" width="px-4"/>
+      <DivComponent text="Rest api" width="px-4"/>
+
   </div>
 </div>
 
-
-<!-- right section removed flex-1 to w-full-->
-      <!-- <img ref="content"
-        :src="girlSittingImg"
-        alt="Typing code illustration"
-        class="w-500 md:w-90 lg:w-[48rem] xl:w-[48rem] rounded-xl bg-transparent content-wrapper"
-        :class="{ 'animate-in': isVisible }"
-      /> -->
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
    <div class="w-full md:w-4/2 flex justify-center min-w-0">
       <img 
@@ -140,9 +104,11 @@
 </template>
 
 <script setup>
-import { darkMode } from '../../data/darkMode.js';
+import DivComponent from '../../composobles/DivComponent.vue';
+import{ darkMode } from '../../data/darkMode.js';
 import { ref, onMounted,watch} from 'vue';
 import girlSittingImg from '../../assets/girl-sitting.png';
+
 
 // for intersection  observer in hero section animation for slide-in left text-box and image-girl sitting
 // If isVisible === true, it adds the animate-in class.
@@ -233,4 +199,5 @@ watch(darkMode, (newVal) => {
 .text-beige {
   color: #F5F5DC !important; /* A light, standard beige */
 }
+
 </style>
