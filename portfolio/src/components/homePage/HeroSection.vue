@@ -6,8 +6,8 @@
       color: darkMode ? 'white' : 'black'
     }"
     class="w-full relative min-h-screen flex flex-col md:flex-row items-center 
-           px-2 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-2 overflow-x-hidden"
-  >
+           px-2 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-2 overflow-x-hidden
+  ">
   
     <div
           class="
@@ -48,14 +48,15 @@
            <!-- this div for the text content wrapper, removed flex-1 to w-full -->
 <div class="w-full flex flex-col md:text-left md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0"> 
       
-        <div class="text-xs md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full justify-center
+        <div class="text-xs md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
                dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-2 bg-white/30 text-[#000000]
               inset-shadow-lg shadow-orange-500/50">
         Ready to Innovate
       </div>
 
-      <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-8 mt-2 md:mt-0">
+      <div class="text-md md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-8 mt-2 md:mt-0">
         Full Stack Developer
+        <AnimatedHeading />
       </div>
       <!-- text section box -->
   <div
@@ -67,7 +68,7 @@
         ]"
       >
         <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
-        <p class="mt-3 mb-0 text-base md:text-md leading-relaxed break-words ">
+        <p class="text-sm mt-3 mb-0  md:text-md leading-relaxed break-words ">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
           logic, and hands-on coding expertise"
@@ -108,6 +109,7 @@ import DivComponent from '../../composobles/DivComponent.vue';
 import{ darkMode } from '../../data/darkMode.js';
 import { ref, onMounted,watch} from 'vue';
 import girlSittingImg from '../../assets/girl-sitting.png';
+import AnimatedHeading from './AnimateHeading.vue';
 
 
 // for intersection  observer in hero section animation for slide-in left text-box and image-girl sitting
