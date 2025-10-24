@@ -48,7 +48,7 @@
            <!-- this div for the text content wrapper, removed flex-1 to w-full -->
 <div class="w-full flex flex-col md:text-left md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0"> 
       
-        <div class="text-xs md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
+        <div class="text-sm md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
                dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-2 bg-white/30 text-[#000000]
               inset-shadow-lg shadow-orange-500/50">
         Ready to Innovate
@@ -68,7 +68,7 @@
         ]"
       >
         <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
-        <p class="text-sm mt-3 mb-0  md:text-md leading-relaxed break-words ">
+        <p class="text-sm mt-3 mb-0  md:text-lg leading-relaxed break-words ">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
           logic, and hands-on coding expertise"
