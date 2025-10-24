@@ -65,7 +65,7 @@ onMounted(() => {
   margin-left: 3px;
   animation: blink 0.7s infinite;
   font-weight: 300; /* Adjust cursor style */
-  color: #ccc; /* Adjust cursor color */
+  color:black; /* Adjust cursor color */
 }
 
 @keyframes blink {
