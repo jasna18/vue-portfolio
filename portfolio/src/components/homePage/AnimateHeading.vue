@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-sm md:text-lg lg:text-xl font-normal md:mt-4 mb-2 ">
+  <h1 class="text-lg md:text-lg lg:text-xl font-normal md:mt-4 mb-2 ">
     {{ displayedText }}<span class="cursor">|</span>
   </h1>
 </template>
