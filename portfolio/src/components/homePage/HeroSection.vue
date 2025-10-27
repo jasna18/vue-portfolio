@@ -5,8 +5,8 @@
       // backgroundColor: darkMode ? '#1F2937' : '#A7C1A8',
       color: darkMode ? 'white' : 'black'
     }"
-    class="w-full relative min-h-screen flex flex-col md:flex-row items-center 
-           px-2 md:px-16 py-8 transition-colors duration-500 gap-8 md:gap-2 overflow-x-hidden
+    class="w-full relative min-h-screen flex flex-col lg:flex-row items-center 
+           px-2 md:px-16 py-8 transition-colors duration-500 lg:gap-6 md:gap-2 overflow-x-hidden
   ">
   
     <div
@@ -31,12 +31,12 @@
           <span class="
           vertical-text-mode /* Uses CSS writing-mode */
           /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
-          ml-[30vh]
+          ml-[5vh] md:ml-[30vh]
           /* NO absolute, NO h-full, NO w-full - let flex center it */
           
           /* Text Styling */
         font-extrabold uppercase
-          text-2xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
+          text-sm md:text-3xl lg:text-4xl tracking-[0.25em]                                    
         ">
         <span class="text-beige">Jasna</span> 
         <span class="text-gray-700">M Naz</span>  
@@ -46,15 +46,15 @@
 
           <!-- left section -->
            <!-- this div for the text content wrapper, removed flex-1 to w-full -->
-<div class="w-full flex flex-col md:text-left md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0"> 
+<div class="w-full lg:w-1/2 flex flex-col md:text-left md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0 sm:text-center"> 
       
-        <div class="text-sm md:text-md mb-2 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
+        <div class="text-sm md:text-md mb-4 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
                dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-2 bg-white/30 text-[#000000]
               inset-shadow-lg shadow-orange-500/50">
-        Ready to Innovate
+        🌟 Ready to Innovate
       </div>
 
-      <div class="text-md md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-8 mt-2 md:mt-0">
+      <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-6 mt-2 md:mt-0">
         Full Stack Developer
         <AnimatedHeading />
       </div>
@@ -68,7 +68,7 @@
         ]"
       >
         <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
-        <p class="text-sm mt-3 mb-0  md:text-lg leading-relaxed break-words ">
+        <p class="text-md mt-3 mb-0  md:text-lg leading-relaxed break-words ">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
           logic, and hands-on coding expertise"
@@ -77,24 +77,24 @@
 
 
          <!-- button section revised, removed flex-1 to w-full-->
-  <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center ">
-
+  <!-- <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center "> -->
+<div class="w-full flex flex-row gap-5 sm:justify-center sm:mt-8 md:flex-row md:items-start md:justify-start md:pl-0 ml-2 md:ml-2 mt-12 mb-2 justify-center ">
       <DivComponent text="Laravel" width="px-1"/>
       <DivComponent text="Codeigniter" width="px-1"/>
       <DivComponent text="Python" width="px-1"/>
-      <DivComponent text="Sql" width="px-4"/>
-      <DivComponent text="Rest api" width="px-4"/>
+      <DivComponent text="Vuejs" width="px-4"/>
+      <DivComponent text="sql" width="px-4"/>
 
   </div>
 </div>
 
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
-   <div class="w-full md:w-4/2 flex justify-center min-w-0">
+   <div class="w-full lg:w-1/2 flex justify-center min-w-0 sm:mt-8">
       <img 
     ref="content"
     :src="girlSittingImg"
     alt="Typing code illustration"
-    class="w-full max-w-sm md:max-w-none md:w-96 lg:w-[48rem] xl:w-[48rem] 
+    class="w-full max-w-sm md:max-w-none md:w-96 sm:w-[48rem] lg:w-[48rem] xl:w-[48rem] 
            rounded-xl bg-transparent content-wrapper"
     :class="{ 'animate-in': isImageVisible }"
 />
