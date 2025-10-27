@@ -13,7 +13,8 @@
           class="
             absolute right-0 top-0                                 /* Positioned at top-right of hero section */
             h-screen                                                /* FULL VIEWPORT HEIGHT */
-            w-[5vw] md:w-[18vw]                                    /* DYNAMIC WIDTH based on viewport size */
+            w-8 sm:w-20 md:w-[18vw]                     /* Use small fixe width on mobilesm */
+            <!-- w-[5vw] md:w-[18vw] lg:w-[10vw] xl:w-[12vw]                                     /* DYNAMIC WIDTH based on viewport size */ -->
             bg-[#F68537]                                     /* Orange background */
             flex items-center justify-center                       /* Center text visually */
             text-white font-bold uppercase                         /* Text styling: bold */
@@ -31,12 +32,12 @@
           <span class="
           vertical-text-mode /* Uses CSS writing-mode */
           /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
-          ml-[5vh] md:ml-[30vh]
+          ml-[5vh] md:ml-[30vh] sm:ml-[10vh]
           /* NO absolute, NO h-full, NO w-full - let flex center it */
           
           /* Text Styling */
         font-extrabold uppercase
-          text-sm md:text-3xl lg:text-4xl tracking-[0.25em]                                    
+          text-sm sm:text-xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
         ">
         <span class="text-beige">Jasna</span> 
         <span class="text-gray-700">M Naz</span>  
