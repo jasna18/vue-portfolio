@@ -7,19 +7,21 @@
     }"
     class="w-full relative min-h-screen flex flex-col lg:flex-row items-center 
            px-2 md:px-16 py-8 transition-colors duration-500 lg:gap-6 md:gap-2 overflow-x-hidden
+           h-full min-w-0 p-4 md:p-0 pt-[80px] sm:pr-24 md:pr-24
+           sm:pl-8  /* This was for content box spacing */
+         md:pl-16/* This was for content box spacing */
   ">
-  
+  <div class="pt-[2px]  w-full h-full flex flex-col md:flex-row justify-between items-start">
     <div
           class="
-            absolute right-0 top-0                                 /* Positioned at top-right of hero section */
-            h-screen                                                /* FULL VIEWPORT HEIGHT */
-            w-8 sm:w-20 md:w-[18vw]                     /* Use small fixe width on mobilesm */
-            <!-- w-[5vw] md:w-[18vw] lg:w-[10vw] xl:w-[12vw]                                     /* DYNAMIC WIDTH based on viewport size */ -->
+             
+            absolute right-0 inset-y-0                              /* Positioned at top-right of hero section */
+            <!-- md:h-[calc(100vh-4.5rem)]  -->                           /* 4rem = 64px (h-16) */
+            w-20 sm:w-24 md:w-[8vw]  lg:w-[10vw] xl:w-[12vw]                   /* Use small fixe width on mobilesm */
             bg-[#F68537]                                     /* Orange background */
-            flex items-center justify-center                       /* Center text visually */
+             hidden sm:flex md:flex lg:flex items-center justify-center                       /* Center text visually */
             text-white font-bold uppercase                         /* Text styling: bold */
             z-40                     
-
             /* SLIDE-IN ANIMATION CLASSES */
             transform duration-1000 ease-out     /* Smooth transition for the slide */
             /* Start position is set by the isVisible class */
@@ -32,12 +34,14 @@
           <span class="
           vertical-text-mode /* Uses CSS writing-mode */
           /* 🌟 NEW: Add a top margin to push the text down by roughly 30% of the bar height (h-screen) */
-          ml-[5vh] md:ml-[30vh] sm:ml-[10vh]
+          <!-- ml-[5vh] md:ml-[30vh] sm:ml-[10vh] -->
+           ml-2 sm:ml-4
           /* NO absolute, NO h-full, NO w-full - let flex center it */
           
           /* Text Styling */
         font-extrabold uppercase
-          text-sm sm:text-xl md:text-3xl lg:text-4xl tracking-[0.25em]                                    
+          <!-- text-sm sm:text-xl md:text-3xl lg:text-4xl tracking-[0.25em] -->
+          text-xs sm:text-sm md:text-xl lg:text-3xl tracking-[0.25em]                                    
         ">
         <span class="text-beige">Jasna</span> 
         <span class="text-gray-700">M Naz</span>  
@@ -47,16 +51,19 @@
 
           <!-- left section -->
            <!-- this div for the text content wrapper, removed flex-1 to w-full -->
-<div class="w-full lg:w-1/2 flex flex-col md:text-left md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0 sm:text-center"> 
+<div class="w-full lg:w-1/2 flex flex-col  md:ml-4 items-center md:items-start p-4 md:p-8 min-w-0 sm:text-center mb-0 gap-2 md:gap-4 md:text-center md:item-center"> 
       
         <div class="text-sm md:text-md mb-4 mt-12 text-center  md:mb-4 md:ml-2 rounded-full 
                dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-2 bg-white/30 text-[#000000]
-              inset-shadow-lg shadow-orange-500/50">
+              inset-shadow-lg shadow-orange-500/50 md:text-center md:item-center">
         🌟 Ready to Innovate
       </div>
 
-      <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-6 mt-2 md:mt-0">
+      <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-1 md:mt-0">
         Full Stack Developer
+        <!-- <AnimatedHeading /> -->
+      </div>
+       <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-6 mt-2 md:mt-0">
         <AnimatedHeading />
       </div>
       <!-- text section box -->
@@ -68,7 +75,7 @@
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         ]"
       >
-        <!-- <h4 class="text-md md:text-2xl mb-4">Hi, I'm Jasna 👩‍💻</h4> -->
+        <h4 class="text-md md:text-2xl mb-4 sm:hidden md:text-left">Hi, I'm Jasna 👩‍💻</h4>
         <p class="text-md mt-3 mb-0  md:text-lg leading-relaxed break-words ">
           "Developing intelligent, responsive, and <br />
           reliable applications by blending design,
@@ -79,7 +86,7 @@
 
          <!-- button section revised, removed flex-1 to w-full-->
   <!-- <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center "> -->
-<div class="w-full flex flex-row gap-5 sm:justify-center sm:mt-8 md:flex-row md:items-start md:justify-start md:pl-0 ml-2 md:ml-2 mt-12 mb-2 justify-center ">
+<div class="w-full flex flex-row gap-5 sm:justify-center sm:mt-8 md:flex-row md:items-start md:justify-start md:pl-0 ml-2 md:ml-2 mt-12 mb-2 justify-center">
       <DivComponent text="Laravel" width="px-1"/>
       <DivComponent text="Codeigniter" width="px-1"/>
       <DivComponent text="Python" width="px-1"/>
@@ -88,14 +95,14 @@
 
   </div>
 </div>
-
+</div>
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
    <div class="w-full lg:w-1/2 flex justify-center min-w-0 sm:mt-8">
       <img 
     ref="content"
     :src="girlSittingImg"
     alt="Typing code illustration"
-    class="w-full max-w-sm md:max-w-none md:w-96 sm:w-[48rem] lg:w-[48rem] xl:w-[48rem] 
+    class="w-full max-w-sm md:max-w-none md:w-96 lg:w-[48rem] xl:w-[48rem]
            rounded-xl bg-transparent content-wrapper"
     :class="{ 'animate-in': isImageVisible }"
 />
