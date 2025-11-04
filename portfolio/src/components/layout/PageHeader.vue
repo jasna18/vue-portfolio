@@ -6,19 +6,22 @@
 :style="{ backgroundColor: darkMode ? '#111827' : '#A7C1A8' }" 
 class="fixed top-0 w-full z-10  transition-colors duration-500"> -->
 <header 
-:class="headerClass" 
-class="fixed top-0 w-full z-10  transition-colors duration-500">
+ :class="headerClass" 
+ class="fixed top-0 w-full z-10  transition-colors duration-500 sm:w-[calc(100vw-6rem)]">
+
+<div class="w-full flex justify-between mx-auto z-50 pl-4 
+                md:w-5/6 md:max-w-7xl">
+  
   <nav 
-  class="flex justify-between items-center px-4 py-3" 
+  class="flex justify-between items-center py-3 w-full md:w-5/6" 
   :class="{'scrolled-nav' :isScrolled }">
     <!-- Mobile menu button -->
     <button class="text-2xl md:hidden" @click="toggleMenu">☰</button>
-
     <!-- Navbar links -->
     <ul class="font-bold"
       :class="[
         menuOpen ? 'flex' : 'hidden',
-        'md:flex flex-col md:flex-row gap-4 md:gap-8 absolute md:static top-14 p-4 md:p-0 shadow md:shadow-none ml-auto mr-100'
+        'md:flex flex-col md:flex-row gap-4 md:gap-8 absolute md:static top-14 p-4 md:p-0 shadow md:shadow-none ml-auto mr-0 md:ml-auto'
       ]">
     <router-link
             v-for="link in links"
@@ -41,6 +44,7 @@ class="fixed top-0 w-full z-10  transition-colors duration-500">
       {{ darkMode ? "🌙" : "☀️" }}
     </button> -->
   </nav>
+</div>
 </header>
 <!-- </div> -->
 </template>
@@ -61,11 +65,12 @@ const links = [
 ];
 const headerClass = computed(() => ({
   "sm:bg-transparent": !isScrolled.value,
+    "md:bg-transparent": !isScrolled.value,
+
   // "sm:bg-[#ECEBDE]": isScrolled.value,
     // "sm:bg-[#FAF6E3]": isScrolled.value,
   "sm:bg-[#E9EED9]": isScrolled.value,
   "shadow-md": isScrolled.value,
-  "p-4": true,
   "sm:py-4": !isScrolled.value,
   
 }));
