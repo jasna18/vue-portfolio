@@ -13,8 +13,7 @@
   ">
   <div class="pt-[2px]  w-full h-full flex flex-col md:flex-row justify-between items-start">
     <div
-          class="
-             
+          class=" 
             absolute right-0 inset-y-0                              /* Positioned at top-right of hero section */
             <!-- md:h-[calc(100vh-4.5rem)]  -->                           /* 4rem = 64px (h-16) */
             w-20 sm:w-24 md:w-[8vw]  lg:w-[10vw] xl:w-[12vw]                   /* Use small fixe width on mobilesm */
