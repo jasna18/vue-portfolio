@@ -7,13 +7,14 @@
 class="fixed top-0 w-full z-10  transition-colors duration-500"> -->
 <header 
  :class="headerClass" 
- class="fixed top-0 w-full z-10  transition-colors duration-500 sm:w-[calc(100vw-6rem)]">
+ class="fixed top-0 w-full z-10  transition-colors duration-500 sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-18vw)]">
 
 <div class="w-full flex justify-between mx-auto z-50 pl-4 
-                md:w-5/6 md:max-w-7xl">
+              md:w-5/6 md:max-w-7xl 
+    md:mx-auto /* 🌟 RE-ADDED CENTERING 🌟 */">
   
   <nav 
-  class="flex justify-between items-center py-3 w-full md:w-5/6" 
+  class="flex justify-between items-center py-3 w-full" 
   :class="{'scrolled-nav' :isScrolled }">
     <!-- Mobile menu button -->
     <button class="text-2xl md:hidden" @click="toggleMenu">☰</button>
@@ -21,7 +22,7 @@ class="fixed top-0 w-full z-10  transition-colors duration-500"> -->
     <ul class="font-bold"
       :class="[
         menuOpen ? 'flex' : 'hidden',
-        'md:flex flex-col md:flex-row gap-4 md:gap-8 absolute md:static top-14 p-4 md:p-0 shadow md:shadow-none ml-auto mr-0 md:ml-auto'
+        'md:flex flex-col md:flex-row gap-4 md:gap-8 absolute md:static top-14 p-4 md:p-0 shadow md:shadow-none ml-auto mr-0 md:ml-auto md:mr-8'
       ]">
     <router-link
             v-for="link in links"
