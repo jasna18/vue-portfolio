@@ -14,7 +14,7 @@
            overflow-x-hidden
            h-full min-w-0  
           ">
-  <div class="w-full flex flex-col items-start pt-20 md:flex-row">
+  <div class="w-full flex flex-col items-start md:flex-row pt-10 md:pt-10 md:m-4 md:w-[calc(100vw-30vw)]">
     <div
           class="
             absolute right-0 inset-y-0  md:min-w-[150px]              /* Positioned at top-right of hero section */
@@ -85,7 +85,7 @@ md:mr-[16vw]
         ]"
       >
         <h4 class="text-md md:text-2xl mb-4 sm:hidden md:text-left">Hi, I'm Jasna 👩‍💻</h4>
-        <p class="text-md mt-3 mb-0  md:text-md leading-relaxed break-words ">
+        <p class="text-md sm:text-sm mt-3 mb-0  md:text-md lg:text-lg leading-relaxed break-words ">
           "Developing intelligent, responsive, and
           reliable applications by blending design,
           logic, and hands-on coding expertise"
