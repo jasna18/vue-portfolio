@@ -14,7 +14,7 @@
            overflow-x-hidden
            h-full min-w-0  
           ">
-  <div class="w-full flex flex-col items-start md:flex-row pt-10 md:pt-10 md:m-4 md:w-[calc(100vw-30vw)]">
+  <div class="w-full flex flex-col items-start md:flex-row pt-10 md:pt-16 md:m-4 md:w-[calc(100vw-30vw)]">
     <div
           class="
             absolute right-0 inset-y-0  md:min-w-[150px]              /* Positioned at top-right of hero section */
@@ -57,7 +57,7 @@
            <!-- this div for the text content wrapper, removed flex-1 to w-full -->
 <div class="w-full lg:w-1/2 flex flex-col  md:ml-4 items-center md:items-start p-4 md:p-8 
 min-w-0 sm:text-center mb-0 gap-2 md:gap-4 md:text-center md:item-center
-md:mr-[16vw] 
+md:mr-[2vw] 
     
     /* Optional: Slightly reduce the wrapper's overall width to prevent stretching */
     md:w-[98%]"> 
@@ -106,7 +106,7 @@ md:mr-[16vw]
 </div>
 </div>
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
-   <div class="w-full md:flex-row lg:w-1/2 flex justify-center min-w-0 sm:mt-8 md:mr-[20vw] ">
+   <div class="w-full md:flex-row lg:w-1/2 flex justify-center min-w-0 sm:mt-8 md:mr-[0vw] ">
       <img 
     ref="content"
     :src="girlSittingImg"
