@@ -6,3 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
 })
+module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-portfolio/" : "/",
+};
