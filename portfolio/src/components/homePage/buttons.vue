@@ -6,7 +6,7 @@
         Ready to Innovate
       </div>
       <div class="text-md md:text-md mb-2 mt-12 tracking-wide rounded-full
-               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-[#F7A189] text-[#f6f8fd]
+               dark:bg-gray-800/40 border border-white/10 backdrop-blur-md shadow-lg p-1 px-4 bg-[#f1aa97] text-[#f6f8fd]
                md:mb-6 ">
         Ready to Innovate
       </div>     

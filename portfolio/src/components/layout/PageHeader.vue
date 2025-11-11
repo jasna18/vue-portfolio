@@ -7,7 +7,9 @@
 class="fixed top-0 w-full z-10  transition-colors duration-500"> -->
 <header 
  :class="headerClass" 
- class="fixed top-0 w-full z-10  transition-colors duration-500 sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-18vw)]">
+ class="fixed top-0 left-0 w-full z-10  transition-colors duration-500 
+ sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-18vw)] lg:w-[calc(100vw-14vw)]
+ xl:w-[calc(100vw-16vw)]">
 
 <div class="w-full flex justify-between mx-auto z-50 pl-4 
               md:w-5/6 md:max-w-7xl 
@@ -70,7 +72,7 @@ const headerClass = computed(() => ({
 
   // "sm:bg-[#ECEBDE]": isScrolled.value,
     // "sm:bg-[#FAF6E3]": isScrolled.value,
-  "sm:bg-[#E9EED9]": isScrolled.value,
+  "sm:bg-[#E1E9C9]": isScrolled.value,
   "shadow-md": isScrolled.value,
   "sm:py-4": !isScrolled.value,
   
