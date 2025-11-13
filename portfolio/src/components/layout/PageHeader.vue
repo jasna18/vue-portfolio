@@ -9,7 +9,7 @@ class="fixed top-0 w-full z-10  transition-colors duration-500"> -->
  :class="headerClass" 
  class="fixed top-0 left-0 w-full z-10  transition-colors duration-500 
  sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-18vw)] lg:w-[calc(100vw-14vw)]
- xl:w-[calc(100vw-16vw)]">
+ xl:w-[calc(100vw-14vw)] 2xl:w-[calc(100vw-14vw)] ">
 
 <div class="w-full flex justify-between mx-auto z-50 pl-4 
               md:w-5/6 md:max-w-7xl 

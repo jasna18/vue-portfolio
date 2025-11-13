@@ -6,20 +6,19 @@
       color: darkMode ? 'white' : 'black'
     }"
     class="w-full relative min-h-screen flex flex-col  items-center
-           px-2 py-8 p-4
+           px-2 py-4 p-4
            sm:pr-24  sm:pl-8  /* This was for content box spacing */
            md:px-16  md:gap-2 md:p-0  md:pr-40 md:pl-16/* This was for content box spacing */
-           lg:gap-6 lg:flex-row 
+           lg:gap-6 lg:flex-row
            transition-colors duration-500 
            overflow-x-hidden
            h-full min-w-0  
           ">
-  <div class="w-full flex flex-col items-start md:flex-row pt-24 md:pt-24 md:mx-4 my-0 md:w-[calc(100vw-30vw)]  ">
+  <div class="w-full flex flex-col items-start md:flex-row  pt-24 md:pt-24 lg:pt-2 md:mx-4 my-0 md:w-[calc(100vw-30vw)]   ">
     <div
           class="
             absolute right-0 inset-y-0  md:min-w-[150px]              /* Positioned at top-right of hero section */
-            <!-- md:h-[calc(100vh-4.5rem)]  -->                           /* 4rem = 64px (h-16) */
-            w-20 sm:w-24 md:w-[18vw]  lg:w-[14vw] xl:w-[16vw]                   /* Use small fixe width on mobilesm */
+            w-20 sm:w-24 md:w-[18vw]  lg:w-[14vw] xl:w-[14vw]                   /* Use small fixe width on mobilesm */
             bg-[#F68537]                                     /* Orange background */
              hidden sm:flex md:flex lg:flex items-center justify-center                       /* Center text visually */
             text-white font-bold uppercase                         /* Text styling: bold */
@@ -94,7 +93,7 @@ md:mr-[2vw]
 
          <!-- button section revised, removed flex-1 to w-full-->
   <!-- <div class="w-full flex flex-row md:flex-row md:items-start gap-5 pl-4 md:pl-0 ml-4 md:ml-2 mt-12 mb-2 md:justify-start justify-center "> -->
-<div class="w-full flex flex-row gap-5 sm:justify-center sm:mt-8 md:flex-row md:items-start md:justify-start md:pl-0 ml-2 md:ml-2 mt-12 mb-2 justify-center md:w-[110%]">
+<div class="w-full flex flex-row gap-5 lg:flex-wrap sm:justify-center sm:mt-8 md:flex-row md:items-start md:justify-start md:pl-0 ml-2 md:ml-2 mt-12 mb-2 justify-center md:w-[110%]">
       <DivComponent text="Laravel" width="px-1" class=""/>
       <DivComponent text="Codeigniter" width="px-1"/>
       <DivComponent text="Python" width="px-1"/>
@@ -105,12 +104,12 @@ md:mr-[2vw]
 </div>
 </div>
       <!-- ref="content" → Vue ref, so you can access this element in your script (maybe for intersection observer to trigger animation). -->
-   <div class="w-full md:flex-row md:w-1/3 lg:w-1/3 xl:w-7/5 flex justify-center min-w-0 sm:mt-8">
+   <div class="w-full md:flex-row md:w-1/3 lg:w-2/3 xl:w-7/5 flex justify-center min-w-0 sm:mt-8 ">
       <img 
     ref="content"
     :src="girlSittingImg"
     alt="Typing code illustration"
-    class="w-full max-w-sm md:max-w-none md:w-100 lg:w-[48rem] xl:w-[48rem]
+    class="w-full max-w-sm md:max-w-none md:w-100 lg:w-[30rem] xl:w-[48rem]
            rounded-xl bg-transparent content-wrapper"
     :class="{ 'animate-in': isImageVisible }"
 />
