@@ -66,7 +66,7 @@ md:mr-[2vw]
         🌟 Ready to Innovate
       </div>
 
-      <div class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-0 md:mt-0">
+      <div class="text-lg md:text-2xl lg:text-xl font-semibold text-gray-700 dark:text-gray-300 md:ml-2 mb-0 md:mt-0">
         Full Stack Developer
         <!-- <AnimatedHeading /> -->
       </div>
